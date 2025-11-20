@@ -18,9 +18,10 @@ You need **Python 3** and the following libraries to run this simulation.
     pip install matplotlib numpy
     ```
 
-    Element,Color,Description
-Rotating Line,🔴 Red,Current XID: The database's current time (transaction counter). Moves clockwise.
-Background,🟢 Green,Visible Past: The valid visibility window (approx. 2 Billion transactions back).
-Dot,🟢 Green,Safe Tuple: A normal row that resides within the safe visibility window.
-Dot,🔴 Red,"Data Loss (Wraparound): A tuple that has fallen outside the visibility window. The DB incorrectly perceives it as being in the ""future,"" making it invisible."
-Dot,🔵 Blue,Frozen Tuple: A tuple that has been processed by VACUUM FREEZE. It is permanently safe and immune to XID wraparound limits.
+| Element | Color | Description |
+| :--- | :--- | :--- |
+| **Rotating Line** | 🔴 Red | **Current XID:** The database's current time. |
+| **Background** | 🟢 Green | **Visible Past:** The valid visibility window. |
+| **Dot** | 🟢 Green | **Safe Tuple:** A normal row within safe window. |
+| **Dot** | 🔴 Red | **Data Loss:** A tuple outside visibility window. |
+| **Dot** | 🔵 Blue | **Frozen Tuple:** Permanently safe tuple. |
