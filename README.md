@@ -17,6 +17,7 @@ You need **Python 3** and the following libraries to run this simulation.
     ```bash
     pip install matplotlib numpy
     ```
+**Visual Legend**
 
 | Element | Color | Description |
 | :--- | :--- | :--- |
